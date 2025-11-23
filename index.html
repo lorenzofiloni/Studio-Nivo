@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Nivo - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation" aria-hidden="true">
+        <svg class="blob-container" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+            <!-- Connection Lines -->
+            <g class="connectors">
+                <path class="connector connector-1" d="M 200,300 Q 400,200 600,350" fill="none" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+                <path class="connector connector-2" d="M 350,600 Q 500,450 700,550" fill="none" stroke="currentColor" stroke-width="1" opacity="0.12"/>
+            </g>
+            
+            <!-- Background Blob (slowest) -->
+            <g class="blob blob-background">
+                <path d="M 450,200 Q 600,180 650,320 Q 680,450 550,520 Q 420,560 350,450 Q 300,350 450,200 Z" 
+                      fill="var(--blob-bg)" filter="url(#glow)"/>
+            </g>
+            
+            <!-- Mid Blob -->
+            <g class="blob blob-mid">
+                <path d="M 250,450 Q 320,400 400,440 Q 460,490 420,570 Q 360,630 280,590 Q 200,540 250,450 Z" 
+                      fill="var(--blob-mid)" filter="url(#glow)"/>
+            </g>
+            
+            <!-- Foreground Blob (accent) -->
+            <g class="blob blob-foreground">
+                <path d="M 650,450 Q 750,420 800,520 Q 820,620 720,680 Q 620,720 570,620 Q 540,520 650,450 Z" 
+                      fill="var(--blob-accent)" filter="url(#glow)"/>
+            </g>
+            
+            <!-- Small sparkles -->
+            <circle class="sparkle sparkle-1" cx="150" cy="200" r="3" fill="var(--accent)" opacity="0.3"/>
+            <circle class="sparkle sparkle-2" cx="850" cy="300" r="2" fill="var(--accent)" opacity="0.25"/>
+            <circle class="sparkle sparkle-3" cx="200" cy="750" r="2.5" fill="var(--accent)" opacity="0.28"/>
+            <circle class="sparkle sparkle-4" cx="780" cy="180" r="2" fill="var(--accent)" opacity="0.22"/>
+            
+            <!-- Blur/Glow Filter -->
+            <defs>
+                <filter id="glow">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="12"/>
+                </filter>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">STUDIO NIVO</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <button class="theme-toggle" id="themeToggle">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="line">Designer</span>
+                <span class="line">&</span>
+                <span class="line">Developer</span>
+            </h1>
+            <p class="hero-subtitle">Crafting digital experiences with precision and creativity</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="intro-text">
+                        Hello! I'm a passionate web developer and designer who loves creating 
+                        beautiful, functional digital experiences. I believe in the power of 
+                        clean code and thoughtful design.
+                    </p>
+                    <p>
+                        With a focus on modern web technologies and user-centered design, 
+                        I bring ideas to life through creative problem-solving and attention 
+                        to detail.
+                    </p>
+                </div>
+                <div class="skills">
+                    <h3>Skills & Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">UI/UX</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Selected Work</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/task-tracker.png" alt="Task Tracker App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Tracker App</h3>
+                        <p>A modern task management application with local storage and elegant design.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://lorenzofiloni.github.io/Task-Tracker/" target="_blank" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Placeholder -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-image">Project 2</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Coming Soon</h3>
+                        <p>More exciting projects on the way. Stay tuned!</p>
+                        <div class="project-tags">
+                            <span>TBD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Placeholder -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-image">Project 3</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Coming Soon</h3>
+                        <p>More exciting projects on the way. Stay tuned!</p>
+                        <div class="project-tags">
+                            <span>TBD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p class="contact-intro">
+                    Interested in working together? Have a question or just want to say hello?
+                </p>
+                <a href="mailto:your.email@example.com" class="contact-button">
+                    Send me an email
+                </a>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                    <a href="#" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Studio Nivo. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
